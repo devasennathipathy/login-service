@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Logo from "../components/Logo.jsx";
 
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Backend URL: set VITE_API_URL in production; empty uses the Vite dev proxy locally.
+const API_URL = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+const EMAIL_RE =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const DEMO = { email: "demo@daybook.app", password: "Daybook123" };
 
 function validate({ email, password }) {
@@ -33,7 +35,7 @@ export default function Login() {
     setLoading(true);
     setServerError("");
     try {
-      const { data } = await axios.post("/api/login", {
+      const { data } = await axios.post(`${API_URL}/api/login`, {
         email: creds.email.trim(),
         password: creds.password,
       });

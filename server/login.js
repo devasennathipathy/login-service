@@ -8,8 +8,7 @@ const USERS = [
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Works as a Vercel serverless function and as an Express handler.
-export default function handler(req, res) {
+export default function login(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed." });
   }
