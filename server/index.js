@@ -10,4 +10,4 @@ app.use(cors({ origin: ["http://localhost:5173", "http://127.0.0.1:5173"] }));
 app.use(express.json());
 app.all("/api/login", login);
 
-app.listen(PORT, () => console.log(`Nimbus API listening on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Daybook API listening on http://localhost:${PORT}`));

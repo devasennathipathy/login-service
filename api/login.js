@@ -2,8 +2,8 @@ import crypto from "node:crypto";
 
 // Mock user store (no database needed)
 const USERS = [
-  { id: 1, name: "Demo User", email: "demo@nimbus.app", password: "Nimbus123" },
-  { id: 2, name: "Alex Rivera", email: "alex@nimbus.app", password: "Secret456" },
+  { id: 1, name: "Demo User", email: "demo@daybook.app", password: "Daybook123" },
+  { id: 2, name: "Alex Rivera", email: "alex@daybook.app", password: "Secret456" },
 ];
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

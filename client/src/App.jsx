@@ -4,7 +4,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 
 export function getSession() {
   try {
-    return JSON.parse(localStorage.getItem("nimbus_session"));
+    return JSON.parse(localStorage.getItem("daybook_session"));
   } catch {
     return null;
   }
